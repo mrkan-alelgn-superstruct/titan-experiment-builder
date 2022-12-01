@@ -1,15 +1,18 @@
 import { Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './components/AuthProvider/AuthProvider';
 import Dashboard from './pages/Dashboard';
 import Home from './pages/Home';
 import PageNotFound from './pages/PageNotFound';
 
 function App() {
   return (
-    <Routes>
-      <Route index element={<Home />} />
-      <Route path='dashboard' element={<Dashboard />} />
-      <Route path='*' element={<PageNotFound />} />
-    </Routes>
+    <AuthProvider>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path='dashboard' element={<Dashboard />} />
+        <Route path='*' element={<PageNotFound />} />
+      </Routes>
+    </AuthProvider>
   );
 }
 
