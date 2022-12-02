@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './components/AuthProvider/AuthProvider';
 import Dashboard from './pages/Dashboard';
 import Home from './pages/Home';
-import PageNotFound from './pages/PageNotFound';
 
 function App() {
   return (
@@ -12,7 +11,7 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/terms-of-use' element={<Home />} />
         <Route path='/privacy-policy' element={<Home />} />
-        <Route path='*' element={<PageNotFound />} />
+        <Route path='*' element={<Home />} />
       </Routes>
     </AuthProvider>
   );

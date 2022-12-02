@@ -5,6 +5,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import Login from '../components/Login/Login';
 import TermsOfUse from '../components/TermsOfUse/TermsOfUse';
 import PrivacyPolicy from '../components/PrivacyPolicy/PrivacyPolicy';
+import PageNotFound from '../components/PageNotFound/PageNotFound';
 
 const Home = () => {
   const { user, loading } = useContext(AuthContext);
@@ -22,8 +23,10 @@ const Home = () => {
             <TermsOfUse />
           ) : pathname === '/privacy-policy' ? (
             <PrivacyPolicy />
-          ) : (
+          ) : pathname === '/' ? (
             <Login />
+          ) : (
+            <PageNotFound />
           )}
         </>
       )}
