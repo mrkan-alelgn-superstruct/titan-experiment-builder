@@ -9,7 +9,8 @@ function App() {
     <AuthProvider>
       <Routes>
         <Route index element={<Home />} />
-        <Route path='dashboard' element={<Dashboard />} />
+        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/terms-of-use' element={<Home />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
     </AuthProvider>
