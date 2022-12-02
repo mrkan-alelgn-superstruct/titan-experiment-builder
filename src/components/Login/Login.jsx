@@ -34,7 +34,12 @@ const Login = () => {
             Terms of use
           </p>
           <p className='login-footer-text'>|</p>
-          <p className='login-footer-text login-footer-button'>
+          <p
+            className='login-footer-text login-footer-button'
+            onClick={() => {
+              navigate('/privacy-policy');
+            }}
+          >
             Privacy policy
           </p>
         </div>

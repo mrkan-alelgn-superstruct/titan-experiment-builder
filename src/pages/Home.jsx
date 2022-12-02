@@ -4,6 +4,7 @@ import AuthContext from '../components/AuthContext/AuthContext';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Login from '../components/Login/Login';
 import TermsOfUse from '../components/TermsOfUse/TermsOfUse';
+import PrivacyPolicy from '../components/PrivacyPolicy/PrivacyPolicy';
 
 const Home = () => {
   const { user, loading } = useContext(AuthContext);
@@ -17,7 +18,13 @@ const Home = () => {
       {!user && !loading && (
         <>
           <HomeNavBar />
-          {pathname === '/terms-of-use' ? <TermsOfUse /> : <Login />}
+          {pathname === '/terms-of-use' ? (
+            <TermsOfUse />
+          ) : pathname === '/privacy-policy' ? (
+            <PrivacyPolicy />
+          ) : (
+            <Login />
+          )}
         </>
       )}
     </>

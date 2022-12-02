@@ -11,6 +11,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/terms-of-use' element={<Home />} />
+        <Route path='/privacy-policy' element={<Home />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
     </AuthProvider>

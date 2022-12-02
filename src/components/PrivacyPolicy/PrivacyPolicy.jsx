@@ -1,10 +1,10 @@
 import React from 'react';
-import './TermsOfUse.css';
+import './PrivacyPolicy.css';
 
-const TermsOfUse = () => {
+const PrivacyPolicy = () => {
   return (
-    <div className='terms-of-use-container'>
-      <h2>Terms of Use</h2>
+    <div className='privacy-policy-container'>
+      <h2>Privacy Policy</h2>
       <p>Titan space technologies Corp.</p>
       <p>Last updated January 1, 2023</p>
       <p>
@@ -54,4 +54,4 @@ const TermsOfUse = () => {
   );
 };
 
-export default TermsOfUse;
+export default PrivacyPolicy;
