@@ -8,7 +8,7 @@ const TermsOfUse = () => {
       <p>Titan space technologies Corp.</p>
       <p>Last updated January 1, 2023</p>
       <p>
-        I am testing firebase PR branch deployment preview after github actions to create env variables2.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        I am testing firebase PR branch deployment preview after github actions to create env variables2sdff.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Nisl rhoncus mattis
         rhoncus urna neque viverra justo. Magna fermentum iaculis eu non diam
         phasellus vestibulum lorem. Est placerat in egestas erat imperdiet.
