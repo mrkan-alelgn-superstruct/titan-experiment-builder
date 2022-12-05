@@ -8,6 +8,18 @@ jobs:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
     steps:
+      - name: Make envfile
+      - uses: SpicyPizza/create-envfile@v1.3
+      - with:
+          REACT_APP_FIREBASE_API_KEY: "AIzaSyDENiFr4NDV2n91Gv8EBYll6946WAifeaU"
+          REACT_APP_FIREBASE_AUTH_DOMAIN: "titan-experiment-builder.firebaseapp.com"
+          REACT_APP_FIREBASE_PROJECT_ID: "titan-experiment-builder"
+          REACT_APP_FIREBASE_STORAGE_BUCKET: "titan-experiment-builder.appspot.com"
+          REACT_APP_FIREBASE_MESSAGING_SENDER_ID: "538277792408"
+          REACT_APP_FIREBASE_APP_ID: "1:538277792408:web:8d7f52cc67a4b5818d5eed"
+          REACT_APP_MICROSOFT_TENANT_ID: "70f75848-d16b-4f3a-b108-7c181c507fe5"
+          file_name: .env
+          fail_on_empty: false
       - uses: actions/checkout@v2
       - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
